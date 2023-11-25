@@ -61,7 +61,7 @@ p{
 }
 .dot{
     text-align: center;
-    color: #d8d8d8;
+    color: #dad4d4;
     font-size: 15px;
     letter-spacing: 5px;
     display: block;
@@ -83,6 +83,7 @@ p{
 .card:hover{
     
     background-color: beige;
+    cursor:pointer;
     
 }
 .card img{
