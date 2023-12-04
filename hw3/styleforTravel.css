@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    transition: opacity .3s ease;
+    opacity: 0.7;
+}
+body{
+    padding-top: 20px;
+}
+section {
+    width: 1300px;
+    padding: 20px 0 0 80px;
+    
+    
+    
+}
+.slogan{
+    font-size: 15px;
+    color: rgb(175, 174, 174);
+}
+.seeall{
+    font-size: 10px ;
+    color: rgb(255, 136, 0);
+    font-weight: bold;
+    position: relative;
+    
+}
+h2{
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    margin: 3rem 0 1.5rem 0;
+    padding-top: 20px;
+}
+.top{
+    padding-top: 5px;
+    
+    
+}
+
+img {
+    width: 100%;
+    border-radius: 5%;
+}
+.container{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    flex-direction:row;
+    
+    
+}
+
+
+.bottom-block {
+    display: flex;
+}
+.left {
+    flex: 1;
+    padding: 10px 30px 10px 10px;
+    
+}
+.right {
+    flex: 1;
+    padding: 10px;
+    font-size: 13px;
+}
+.date{
+    padding-top: 10px;
+    font-size: 12px;
+}
+.activity{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 將空間分為四等份 */
+    gap: 10px;
+}
+.container-group{
+    padding: 5px;
+    display: flex;
+    justify-content:space-between;
+}
+.box h3{
+    font-size: 14px;
+    padding: 10px 0;
+}
+.box {
+    padding: 10px;
+    justify-content: space-around;
+    
+}
+.lebel{
+    font-size: 10px;
+    
+}
+.lebel2{
+    color: white;
+    font-size: 10px;
+}
+.section:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+    
+}
