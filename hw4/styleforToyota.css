@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.card-group{
+    padding-top: 20px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+.introduce1{
+    width: 320px;
+    position:absolute;
+    top: 152px;
+    left: 100px;
+    z-index: 3;
+    
+    
+}
+.card:nth-child(2) .introduce1{
+    
+    left: 800px;
+}
+.introduce2{
+    width: 700px;
+    height:250px;
+    position: relative;
+    top: -10%;
+    left: 10%;
+}
+.card:nth-child(2) .introduce2{
+    
+    left: 30%;
+}
+.img{
+    width: 800px;
+    position: relative;
+    top: 0%;
+    left:25%;
+    display: block;
+    z-index: 2;
+    
+}
+.card:nth-child(2) .img{
+    
+    left: 15%;
+}
+
+.function{
+    font-size: 50px;
+    
+}
+.background {
+    background-color: rgb(241, 238, 238);
+    width: 400px;
+    height: 280px;
+    position: relative;
+    top: 15%;
+    left: 66.7%;
+    z-index: 1;
+}
+.card:nth-child(2) .background{
+    
+    left: 40%;
+    top:20%;
+}
+.card{
+    width: 1300px; 
+    box-sizing: border-box;
+    position: relative;
+}
+.function{
+    background-color: brown;
+    color:white;
+    padding: 0px;
+
+}
+.introduce1 .content{
+    background: black;
+    color:white;
+    padding: 10px 10px 10px 10px;
+    word-spacing: 6px;
+    line-height: 30px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.introduce2 .content{
+    background: rgb(228, 224, 224);
+    color:white;
+    padding: 5px 5px 5px 10px;
+    width: 680px;
+    padding: 5px 20px 20px 20px;
+    z-index: 3;
+    position: relative;
+    line-height: 18px;
+}
+
+
+
+.introduce1 .content h2{
+    font-size: 25px;
+    word-spacing: 5px;
+    display: block;
+}
+.introduce2 .content h2{
+    color:brown;
+    padding: 5px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-weight: 800;
+    
+
+}
+.introduce2 .content h3{
+    color:white;
+    background-color: black;
+    display: inline-block;
+    padding: 4px;
+    font-size: 16px;
+    font-weight: 200;
+    margin: 5px;
+}
+span{
+    font-size: 96px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: inline-block;
+    transform: rotate(90deg);
+    padding: 0px;
+
+}
+p{
+    padding-left: 10px;
+    color:rgb(89, 89, 89);
+    display: block;
+}
+
+.introduce2:nth-child(2){
+    top: 90%;
+    left: 90%;
+}
+
+/* .content p::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+    background: rgb(142, 24, 24);
+    box-sizing: border-box;
+} */
