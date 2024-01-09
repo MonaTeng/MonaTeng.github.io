@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>終極密碼遊戲</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>終極密碼遊戲</h1>
+        <label for="guess">輸入數字：</label>
+        <input type="text" id="guess" maxlength="4" pattern="\d{4}" title="請輸入四個數字" required>
+        <button id="check">確認</button>
+        <button id="restart">重新開始</button>
+        <button id="clear">清除</button>
+        <button id="show-answer">查看答案</button>
+        <div id="result-list"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function () {
+                let secretNumber;
+                let guesses = [];
+
+                const guessInput = document.getElementById('guess');
+                const buttons = document.querySelectorAll('button');
+                const resultList = document.getElementById('result-list');
+
+                buttons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        handleButtonClick(button.id);
+                    });
+                });
+
+                function handleButtonClick(buttonId) {
+                    switch (buttonId) {
+                        case 'check':
+                            checkGuess();
+                            break;
+                        case 'restart':
+                            resetGame();
+                            break;
+                        case 'clear':
+                            clearInputAndResults();
+                            break;
+                        case 'show-answer':
+                            showAnswer();
+                            break;
+                        default:
+                            break;
+                    }
+                }
+
+                function checkGuess() {
+                    const guess = guessInput.value;
+
+                    if (!isValidGuess(guess)) {
+                        alert('超過指定數字或有重複數字！');
+                        return;
+                    }
+
+                    const result = compareGuess(guess);
+
+                    const resultText = document.createElement('p');
+                    resultText.innerText = `${guess} - ${result}`;
+                    resultList.appendChild(resultText);
+
+                    if (result === '4A0B') {
+                        alert(`猜對了！答案是: ${secretNumber}`);
+                        resetGame();
+                    }
+
+                    guessInput.value = '';
+                }
+
+                function isValidGuess(guess) {
+                    const regex = /^\d{4}$/;
+                    if (!regex.test(guess)) {
+                        return false;
+                    }
+
+                    const uniqueDigits = new Set(guess);
+                    return uniqueDigits.size === 4;
+                }
+
+                function compareGuess(guess) {
+                    let aCount = 0;
+                    let bCount = 0;
+
+                    for (let i = 0; i < 4; i++) {
+                        if (guess[i] === secretNumber[i]) {
+                            aCount++;
+                        } else if (secretNumber.includes(guess[i])) {
+                            bCount++;
+                        }
+                    }
+
+                    return `${aCount}A${bCount}B`;
+                }
+
+                function resetGame() {
+                    secretNumber = generateSecretNumber();
+                    guesses = [];
+                    clearInputAndResults();
+                }
+
+                function clearInputAndResults() {
+                    guessInput.value = '';
+                    resultList.innerHTML = '';
+                }
+
+                function showAnswer() {
+                    alert(`答案是: ${secretNumber}`);
+                }
+
+                function generateSecretNumber() {
+                    const numbers = Array.from({ length: 10 }, (_, index) => index.toString());
+                    let secret = '';
+
+                    for (let i = 0; i < 4; i++) {
+                        const randomIndex = Math.floor(Math.random() * numbers.length);
+                        secret += numbers.splice(randomIndex, 1)[0];
+                    }
+
+                    return secret;
+                }
+            });
+
+        });
+    </script>
+</body>
+
+</html>
