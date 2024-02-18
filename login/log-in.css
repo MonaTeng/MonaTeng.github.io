@@ -1,0 +1,77 @@
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #3897c0;
+}
+
+.modal-header {
+    height: 66%;
+    padding: 60px;
+    margin-bottom: 60px;
+
+}
+
+.modal-header h3 {
+    font-size: 30px;
+    color: #5c676c;
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header h4 {
+    padding-bottom: 8%;
+    margin-top: 10px;
+    font-size: 20px;
+    color: #a6afb3;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+.modal-header .btn-close {
+    font-size: 25px;
+    color: #5c676c;
+    position: absolute;
+    top: 8%;
+    left: 85%;
+}
+
+.modal-body .connect {
+    margin: 10px;
+    color: #abb1b4;
+    margin-top: 4%;
+}
+
+.modal-body form {
+    text-align: center;
+}
+
+
+
+.modal-body form .account,
+.modal-body form .password {
+    margin: 15px;
+    width: 93%;
+    border-radius: 10px;
+}
+
+.modal-body form .forgetpw{
+    padding-left: 75%;
+    padding-bottom: 4%;
+
+}
+
+.modal-body form .btn {
+    width: 93%;
+    font-size: 25px;
+    color: #fff;
+}
+
+.modal-footer .signup {
+    padding: 0% 4%;
+}
+
+
